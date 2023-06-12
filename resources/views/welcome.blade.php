@@ -15,7 +15,41 @@
 
 </head>
 <body>
-
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Azienda</th>
+                        <th scope="col">Stazione_di_partenza</th>
+                        <th scope="col">Stazione_di_arrivo</th>
+                        <th scope="col">Orario_di_partenza</th>
+                        <th scope="col">Orario_di_arrivo</th>
+                        <th scope="col">Codice_treno</th>
+                        <th scope="col">Numero_carrozze</th>
+                        <th scope="col">In_orario</th>
+                        <th scope="col">Cancellato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($trains as $element)
+                    <tr class="">
+                        <td>{{ $element->Azienda }}</td>
+                        <td>{{ $element->Stazione_di_partenza }}</td>
+                        <td>{{ $element->Stazione_di_arrivo }}</td>
+                        <td>{{ $element->Orario_di_partenza }}</td>
+                        <td>{{ $element->Orario_di_arrivo }}</td>
+                        <td>{{ $element->Codice_treno }}</td>
+                        <td>{{ $element->Numero_carrozze }}</td>
+                        <td>{{ $element->In_orario ? 'si' : 'no' }}</td>
+                        <td>{{ $element->Cancellato ? 'si' : 'no'}}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
 </body>
 
 </html>
