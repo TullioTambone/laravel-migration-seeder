@@ -41,8 +41,8 @@
                         <td>{{ $element->Orario_di_arrivo }}</td>
                         <td>{{ $element->Codice_treno }}</td>
                         <td>{{ $element->Numero_carrozze }}</td>
-                        <td>{{ $element->In_orario ? 'si' : 'no' }}</td>
-                        <td>{{ $element->Cancellato ? 'si' : 'no'}}</td>
+                        <td>{{ $element->In_orario ? '' : 'in ritardo' }}</td>
+                        <td>{{ $element->Cancellato ? 'si' : ''}}</td>
                     </tr>
                     @endforeach
                 </tbody>
